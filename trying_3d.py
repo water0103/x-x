@@ -1,4 +1,5 @@
 import pygame
+import math
 
 windowsize = 800    #new window size = 800 * 800
 window = pygame.display.set_mode((windowsize , windowsize))     #using pygame display fuction to show a new window with 800 *800
