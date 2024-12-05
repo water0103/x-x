@@ -13,7 +13,7 @@ def function(x , k):
     real = math.cos((2 * k + 1) * math.pi * x)
     imagine = math.sin((2 * k + 1) * math.pi * x)
     x0 = x
-    return real , x0 , imagine
+    return x0 , real , imagine
 
 number_of_x = -10
 l = []
