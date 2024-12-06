@@ -33,3 +33,6 @@ daily:
 
 11/11:
 1. trying 3d with easy way, but failed
+
+12/6:
+# https://github.com/Josephbakulikira/3D-perspective-projection-with-python-/blob/master/main.py
