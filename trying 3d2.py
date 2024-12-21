@@ -16,7 +16,7 @@ def function(x , k):
     x0 = x
     return x0 , real , imagine
 
-number_of_x = -5
+number_of_x = -100
 l1 = l = []
 running = True
 projection_matrix = np.matrix([[1,0,0],
@@ -70,8 +70,8 @@ while(running):
     for i in range(1 , len(l)):
         pygame.draw.line(window , white , (int(l[i-1][0]) , int(l[i-1][1])) , (int(l[i][0]) , int(l[i][1])) , 1)
     '''
-    number_of_x += 0.05
-    if number_of_x > 5:
+    number_of_x += 0.1
+    if number_of_x > 100:
         running = False
 
     for event in pygame.event.get():
