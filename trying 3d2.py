@@ -26,7 +26,7 @@ projection_matrix = np.matrix([[1,0,0],
 fov = 200  # 視場角
 distance = 5  # 視距
 
-def project_3d_to_2d(point, fov, distance):
+def project_3d_to_2d(point, fov = 200, distance = 5):
     x, y, z = point[0], point[1], point[2]
     if z != 0:
         factor = fov / (distance + z)
@@ -50,9 +50,7 @@ while(running):
     three_d_points1[1][0] = imagine
     three_d_points1[2][0] = real
     points1 = project_3d_to_2d(three_d_points1)
-    x1 = x
-    y1 = imagine
-    l1.append((x1 , y1))
+    l1.append(points1)
 
     for i in range(1 , len(l1)):
         pygame.draw.line(window , white, (int(l1[i-1][0]) , int(l1[i-1][1])) , (int(l1[i][0]) , int(l1[i][1])) , 1)
@@ -72,7 +70,7 @@ while(running):
     for i in range(1 , len(l)):
         pygame.draw.line(window , white , (int(l[i-1][0]) , int(l[i-1][1])) , (int(l[i][0]) , int(l[i][1])) , 1)
     '''
-    number_of_x += 0.01
+    number_of_x += 0.05
     if number_of_x > 5:
         running = False
 
