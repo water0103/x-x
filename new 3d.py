@@ -6,14 +6,18 @@ import numpy as np
 pygame.init()
 
 window_size = 800
-'''
+
 window = pygame.display.set_mode((window_size , window_size))
-clock = pygame.time.Clock()
-'''
-x_changing = -10
-l = []
+time = pygame.time.Clock()
+
+x_changing = -5
+l0 = []
+l1 = []
+l2 = []
 
 white = (255, 255 ,255)
+green = (0, 255, 0)
+DeepPink = (255, 20, 147)
 
 def factor(x):
     return x * 100 + window_size / 2
@@ -24,27 +28,48 @@ def function(x , k):
     real_number = math.cos(basic_number)
     imagine_number = math.sin(basic_number)
     x0 = x
-    return factor(x0) , factor(real_number) , factor(imagine_number)
-    #return x0 , real_number , imagine_number
+    #return factor(x0) , factor(real_number) , factor(imagine_number)
+    return x0 , real_number , imagine_number
 
-def build_projection_matrix(fov, aspect, zn, zf):
-    # 初始化矩陣
-    proj = np.zeros((4, 4), dtype=float)
-
-    # 計算投影矩陣
-    proj[0][0] = 1 / (math.tan(fov * 0.5) * aspect)
-    proj[1][1] = 1 / math.tan(fov * 0.5)
-    proj[2][2] = zf / (zf - zn)
-    proj[2][3] = 1.0
-    proj[3][2] = (zn * zf) / (zn - zf)
-
-    return proj
+def pro_matrix(x , y , z , fov = math.radians(math.pi / 4)):
+    x_proj = x + y * math.pow(math.cos(fov) , 2)
+    y_proj = z + y * math.pow(math.cos(fov) , 2)
+    return factor(x_proj) , factor(y_proj)
 
 running = True
+times = 0
 while(running):
-    points = np.matrix([0],[0],[0])
+    time.tick(60)
+    window.fill((0,0,0))
+    # k = 0
+    x0 , real0 , imagine0 = function(x_changing , 0)
+    projection_x , projection_y = pro_matrix(x0 , real0 , imagine0)
+    l0.append((projection_x , projection_y))
 
-    x , real , imagine = function(x_changing , 0)
-    points[0][0] = x
-    points[1][0] = real
-    points[2][0] = imagine
+    # k = 1
+    x1 , real1 , imagine1 = function(x_changing , 1)
+    projection_x , projection_y = pro_matrix(x1 , real1 , imagine1)
+    l1.append((projection_x , projection_y))
+    
+    # k = 2
+    x2 , real2 , imagine2 = function(x_changing , 2)
+    projection_x , projection_y = pro_matrix(x2 , real2 , imagine2)
+    l2.append((projection_x , projection_y))
+
+    for i in range(1 , len(l0)):
+        pygame.draw.line(window, white , (int(l0[i-1][0]) , int(l0[i-1][1])) , (int(l0[i][0]) , int(l0[i][1])) , 2)
+    for i in range(1 , len(l1)):
+        pygame.draw.line(window, green , (int(l1[i-1][0]) , int(l1[i-1][1])) , (int(l1[i][0]) , int(l1[i][1])) , 1)
+    for i in range(1 , len(l2)):
+        pygame.draw.line(window, DeepPink , (int(l2[i-1][0]) , int(l2[i-1][1])) , (int(l2[i][0]) , int(l2[i][1])) , 1)
+
+    x_changing += 0.015
+    times += 1
+    if times >= 1000:
+        running = False
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+    pygame.display.flip()
+pygame.quit()
