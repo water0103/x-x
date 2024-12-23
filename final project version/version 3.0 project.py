@@ -192,6 +192,7 @@ while running:
 
     elif screen_state == "3d":
         draw_button("x ** x  3d", blue, button_rect)
+
         # k = 0
         x0 , real0 , imagine0 = function(x_changing , 0)
         projection_x , projection_y = pro_matrix(x0 , real0 , imagine0)
@@ -291,5 +292,6 @@ while running:
             elif event.type == pygame.MOUSEBUTTONDOWN and button_rect.collidepoint(event.pos):
                 screen_state = "2d"
     pygame.display.flip()
+    
 # 結束 Pygame
 pygame.quit()
