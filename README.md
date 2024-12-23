@@ -41,15 +41,19 @@ title:
     4. design a new way of the projection matrix
 
 2. the function of the code
-    Making 4 kinds of graph with code. These 4 graphic are two on the 2d plane and two on the 3d plane. Using projection matrix to make it show on the graph
+
+   Making 4 kinds of graph with code. These 4 graphic are two on the 2d plane and two on the 3d plane. Using projection matrix to make it show on the graph
 
 3. The way to use to code
+   
     press start then the code started. When you want to change it to the next graph, press the bottom with typing words. Then you can change it to the next graph. If you want to stop the code, wait for a few seconds then it will close or you can just press cross on the new screen. If you want to make the code to maintain at a specific time, use your mouse to hold the new screen's upside, it will stop until your mouse is not holding at it.
 
-4. Architecture of the code
+5. Architecture of the code
+   
     divert it into 4 parts. Each part using independent parameter to make it work well without interference other code working. Using a bottom to change these graph enviroment.
 
-5. source of the data
+7. source of the data
+   
     1.https://www.youtube.com/watch?v=qw0oY6Ld-L0&t=1405s
     2.https://www.youtube.com/watch?v=6HYZWVYv0WY
     3.https://www.cnblogs.com/liuzhongkun/p/16165288.html
