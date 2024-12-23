@@ -50,9 +50,9 @@ title:
     divert it into 4 parts. Each part using independent parameter to make it work well without interference other code working. Using a bottom to change these graph enviroment.
 
 5. source of the data
-    https://www.youtube.com/watch?v=qw0oY6Ld-L0&t=1405s
-    https://www.youtube.com/watch?v=6HYZWVYv0WY
-    https://www.cnblogs.com/liuzhongkun/p/16165288.html
-    https://www.cnblogs.com/graphics/archive/2012/07/25/2582119.html
-    https://www.cnblogs.com/happystudyeveryday/p/11077024.html
-    https://chatgpt.com/share/6769c006-7b7c-800f-a9d4-0e061e5807f4 (for debugging)
+    1.https://www.youtube.com/watch?v=qw0oY6Ld-L0&t=1405s
+    2.https://www.youtube.com/watch?v=6HYZWVYv0WY
+    3.https://www.cnblogs.com/liuzhongkun/p/16165288.html
+    4.https://www.cnblogs.com/graphics/archive/2012/07/25/2582119.html
+    5.https://www.cnblogs.com/happystudyeveryday/p/11077024.html
+    6.https://chatgpt.com/share/6769c006-7b7c-800f-a9d4-0e061e5807f4 (for debugging)
