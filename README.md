@@ -33,12 +33,3 @@ daily:
 
 11/11:
 1. trying 3d with easy way, but failed
-
-12/6:
-# https://github.com/Josephbakulikira/3D-perspective-projection-with-python-/blob/master/main.py
-
-12/23 , 12/24
-# https://www.cnblogs.com/graphics/archive/2012/07/25/2582119.html
-# https://www.cnblogs.com/happystudyeveryday/p/11077024.html
-1. above these line is just I do it for reference. In fact, I made the projection matrix in my own way. 
-2. finishing the 3d matrix graph in a very ugly graph. However the approxiamtely trend of the graph is correct.
