@@ -4,6 +4,6 @@ k = ([[1 , 1 , 1],
       [1 , 1 , 1],
       [1 , 1 , 1]])
 projection_matrix = np.matrix([[1, 0, 0],
-                               [0, 1, 0]])
+                               [0, 1, 0]] )
 x = np.dot(projection_matrix , k)
 print(x)
