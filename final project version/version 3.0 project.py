@@ -179,7 +179,7 @@ while running:
         window.blit(text_green, (window_size / 8, 150))
         window.blit(text_deeppink, (window_size / 8, 175))
 
-        x_value_2 += 0.01
+        x_value_2 += 0.005
         if x_value_2 > 5:
             running = False
 
