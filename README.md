@@ -46,7 +46,7 @@ title:
 
 3. The way to use to code
    
-    Install pygame at powershell in vs code(Terminal --> new terminal). Press start then the code started. When you want to change it to the next graph, press the bottom with typing words. Then you can change it to the next graph. If you want to stop the code, wait for a few seconds then it will close or you can just press cross on the new screen. If you want to make the code to maintain at a specific time, use your mouse to hold the new screen's upside, it will stop until your mouse is not holding at it.
+    Install pygame at powershell in vs code(Terminal --> new terminal). Download the code at version 3.0 project.py(final project version --> version 3.0 project.py). Press start then the code started. When you want to change it to the next graph, press the bottom with typing words. Then you can change it to the next graph. If you want to stop the code, wait for a few seconds then it will close or you can just press cross on the new screen. If you want to make the code to maintain at a specific time, use your mouse to hold the new screen's upside, it will stop until your mouse is not holding at it.
 
 5. Architecture of the code
    
