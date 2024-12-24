@@ -60,3 +60,4 @@ title:
     4.https://www.cnblogs.com/graphics/archive/2012/07/25/2582119.html
     5.https://www.cnblogs.com/happystudyeveryday/p/11077024.html
     6.https://chatgpt.com/share/6769c006-7b7c-800f-a9d4-0e061e5807f4 (for debugging)
+    7.the main code is all done by myself, only other data are all reference. I did not use these data at all, because it does not achieve my expectation.
